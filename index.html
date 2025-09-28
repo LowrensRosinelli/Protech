@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ProTech — Beautifully Simple Electronics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ProTech — curated tech, clean design." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="products.html" aria-current="page">Products</a>
+          <a href="cart.html">Cart</a>
+          <a href="account/login.html">Sign in</a>
+          <a href="account/register.html" class="pill">Create account</a>
+        </nav>
+      </div>
+    </header>
+
+  
+    <div class="page">
+     
+      <section class="hero container">
+        <h1>Beautifully simple electronics</h1>
+        <p>Curated tech, clean design, modern essentials.</p>
+        <div class="cta"><a href="products.html">All Products</a></div>
+      </section>
+
+    
+      <section class="container" aria-label="New products carousel">
+        <div class="section-head">
+          <h2>New this week</h2>
+        </div>
+
+        <div class="carousel" aria-roledescription="carousel">
+          <button class="car-btn prev" aria-label="Previous slide">‹</button>
+          <div class="car-track" id="carTrack" aria-live="polite"></div>
+          <button class="car-btn next" aria-label="Next slide">›</button>
+        </div>
+      </section>
+
+  
+      <main class="container" id="main">
+        <div class="section-head">
+          <h2>All electronics</h2>
+          <div id="status" class="status">Loading products…</div>
+        </div>
+        <div id="grid" class="grid" aria-live="polite"></div>
+        <noscript>
+          <p class="status">JavaScript is required to load products.</p>
+        </noscript>
+      </main>
+    </div>
+
+
+    <footer>
+      <div class="container footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">ProTech</div>
+          <p class="footer-tagline">Beautifully simple electronics.</p>
+        </div>
+        <blockquote class="footer-quote">
+          “Simplicity is the ultimate sophistication.”
+        </blockquote>
+      </div>
+      <div class="container footer-bottom">
+        <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+        <nav class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Cookies</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>

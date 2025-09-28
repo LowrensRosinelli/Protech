@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Cart — ProTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your cart — ProTech" />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="stylesheet" href="cart.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="products.html">Products</a>
+          <a href="cart.html" aria-current="page">Cart</a>
+          <a href="account/login.html">Sign in</a>
+          <a href="account/register.html" class="pill">Create account</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="container" aria-labelledby="cart-title">
+        <div class="section-head">
+          <h1
+            id="cart-title"
+            style="font-size: 22px; letter-spacing: -0.01em; margin: 0">
+            Your cart
+          </h1>
+          <div class="status" id="cartStatus"></div>
+        </div>
+
+        <div id="cartEmpty" class="cart-empty" hidden>
+          <p>Your cart is empty.</p>
+          <a class="btn-primary" href="products.html">Browse products</a>
+        </div>
+
+        <div
+          id="checkoutSuccess"
+          class="checkout-success"
+          hidden
+          role="status"
+          aria-live="polite">
+          <div class="checkmark" aria-hidden="true">✓</div>
+          <h2>Checkout successful</h2>
+          <p class="muted">Thanks! Your order is confirmed.</p>
+          <div class="success-actions">
+            <a class="btn-primary" href="products.html">Continue shopping</a>
+          </div>
+        </div>
+
+        <section id="cartList" class="cart-list" role="list"></section>
+
+        <aside class="cart-summary card">
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="cartSubtotal">$0.00</strong>
+          </div>
+          <div class="summary-row muted">
+            <span>Shipping</span>
+            <span>Calculated at checkout</span>
+          </div>
+          <div class="summary-total">
+            <span>Total</span>
+            <strong id="cartTotal">$0.00</strong>
+          </div>
+          <div class="summary-actions">
+            <button
+              id="clearCart"
+              class="pill"
+              type="button"
+              aria-label="Clear cart">
+              Clear cart
+            </button>
+            <a
+              id="checkoutBtn"
+              class="btn-primary"
+              href="#"
+              aria-label="Proceed to checkout"
+              >Checkout</a
+            >
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <div class="container footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">ProTech</div>
+            <p class="footer-tagline">Beautifully simple electronics.</p>
+          </div>
+          <blockquote class="footer-quote">
+            “Simplicity is the ultimate sophistication.”
+          </blockquote>
+        </div>
+
+        <div class="container footer-bottom">
+          <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+          <nav class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="cart.js"></script>
+  </body>
+</html>

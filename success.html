@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Success — ProTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Order success — ProTech" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="success.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="products.html">Products</a>
+          <a href="cart.html">Cart</a>
+          <a href="account/login.html">Sign in</a>
+          <a href="account/register.html" class="pill">Create account</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="container">
+        <section
+          class="card success-card"
+          role="status"
+          aria-live="polite"
+          tabindex="-1">
+          <div class="checkmark">✓</div>
+          <h1 class="success-title">Checkout successful</h1>
+          <p class="muted">Thanks! Your order is confirmed.</p>
+          <div class="success-actions">
+            <a class="btn-primary" href="products.html">Continue shopping</a>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">ProTech</div>
+            <p class="footer-tagline">Beautifully simple electronics.</p>
+          </div>
+          <blockquote class="footer-quote">
+            “Simplicity is the ultimate sophistication.”
+          </blockquote>
+        </div>
+        <div class="container footer-bottom">
+          <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+          <nav class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script defer>
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelector(".success-card")?.focus();
+      });
+    </script>
+  </body>
+</html>

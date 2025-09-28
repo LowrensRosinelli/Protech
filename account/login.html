@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sign in — ProTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sign in to your ProTech account" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body class="auth">
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="../index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="../products.html">Products</a>
+          <a href="../cart.html">Cart</a>
+          <a href="./login.html" aria-current="page">Sign in</a>
+          <a href="./register.html" class="pill">Create account</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="container" id="main">
+        <section class="form-page" aria-labelledby="login-title">
+          <h1 id="login-title">Sign in</h1>
+
+          <form id="loginForm" method="post" action="" novalidate>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required />
+            </div>
+
+            <div>
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="current-password"
+                required />
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn-primary">
+              Sign in
+            </button>
+
+            <p id="successMessage" class="form-success" style="display: none">
+              Signed in. Redirecting…
+            </p>
+            <p id="errorMessage" class="form-error" style="display: none"></p>
+          </form>
+
+          <p class="form-note">
+            Don’t have an account?
+            <a href="./register.html">Create one here.</a>
+          </p>
+        </section>
+      </main>
+
+      <footer>
+        <div class="container footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">ProTech</div>
+            <p class="footer-tagline">Beautifully simple electronics.</p>
+          </div>
+          <blockquote class="footer-quote">
+            “Simplicity is the ultimate sophistication.”
+          </blockquote>
+        </div>
+
+        <div class="container footer-bottom">
+          <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+          <nav class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="signin.js"></script>
+  </body>
+</html>

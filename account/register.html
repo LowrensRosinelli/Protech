@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Create account — ProTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Create a new ProTech account" />
+    <!-- Correct paths (file is inside /account/) -->
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="../index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="../products.html">Products</a>
+          <a href="../cart.html">Cart</a>
+          <a href="./login.html">Sign in</a>
+          <a href="./register.html" class="pill" aria-current="page"
+            >Create account</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="container">
+        <section class="form-page" aria-labelledby="register-title">
+          <h1 id="register-title">Create account</h1>
+
+          <!-- action="" prevents navigation if JS handles submit -->
+          <form id="registerForm" method="post" action="" novalidate>
+            <div>
+              <label for="regName">Full name</label>
+              <input
+                type="text"
+                id="regName"
+                name="name"
+                autocomplete="name"
+                required />
+            </div>
+
+            <div>
+              <label for="regEmail">Email</label>
+              <input
+                type="email"
+                id="regEmail"
+                name="email"
+                autocomplete="email"
+                required />
+            </div>
+
+            <div>
+              <label for="regPassword">Password</label>
+              <input
+                type="password"
+                id="regPassword"
+                name="password"
+                autocomplete="new-password"
+                required />
+            </div>
+
+            <div>
+              <label for="regConfirm">Confirm password</label>
+              <input
+                type="password"
+                id="regConfirm"
+                name="confirm"
+                autocomplete="new-password"
+                required />
+            </div>
+
+            <button type="submit" id="regSubmit" class="btn-primary">
+              Create account
+            </button>
+
+            <p id="regSuccess" class="form-success" style="display: none">
+              Account created. Signing you in…
+            </p>
+            <p id="regError" class="form-error" style="display: none"></p>
+          </form>
+
+          <p class="form-note">
+            Already have an account?
+            <a href="./login.html">Sign in here.</a>
+          </p>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="container footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">ProTech</div>
+            <p class="footer-tagline">Beautifully simple electronics.</p>
+          </div>
+          <blockquote class="footer-quote">
+            “Simplicity is the ultimate sophistication.”
+          </blockquote>
+        </div>
+
+        <div class="container footer-bottom">
+          <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+          <nav class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <script defer src="register.js"></script>
+  </body>
+</html>

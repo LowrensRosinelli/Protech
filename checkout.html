@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Checkout — ProTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Checkout — ProTech" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="checkout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav" role="navigation" aria-label="Primary">
+        <div class="brand"><a href="index.html">ProTech</a></div>
+        <nav class="nav-links" role="navigation" aria-label="Primary">
+          <a href="products.html">Products</a>
+          <a href="cart.html">Cart</a>
+          <a href="account/login.html">Sign in</a>
+          <a href="account/register.html" class="pill">Create account</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="page">
+      <main class="container" aria-labelledby="co-title">
+        <div class="section-head">
+          <h1
+            id="co-title"
+            style="font-size: 22px; letter-spacing: -0.01em; margin: 0">
+            Checkout
+          </h1>
+          <div class="status" id="coStatus"></div>
+        </div>
+
+        <form id="checkoutForm" class="checkout-grid" novalidate>
+          <section class="card co-card" aria-label="Delivery address">
+            <h2 class="co-h">Delivery address</h2>
+            <div class="co-fields">
+              <label
+                >Full name
+                <input
+                  type="text"
+                  id="fullName"
+                  required
+                  placeholder="Jane Doe" />
+              </label>
+              <label
+                >Email
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  placeholder="jane@example.com" />
+              </label>
+              <label
+                >Address
+                <input
+                  type="text"
+                  id="address"
+                  required
+                  placeholder="123 Main St" />
+              </label>
+              <div class="co-row2">
+                <label
+                  >Postal code
+                  <input type="text" id="zip" required placeholder="0001" />
+                </label>
+                <label
+                  >City
+                  <input type="text" id="city" required placeholder="Oslo" />
+                </label>
+              </div>
+              <label
+                >Country
+                <input type="text" id="country" required placeholder="Norway" />
+              </label>
+            </div>
+          </section>
+
+          <section class="card co-card" aria-label="Payment">
+            <h2 class="co-h">Payment</h2>
+            <div class="co-fields">
+              <div class="co-pay">
+                <label
+                  ><input type="radio" name="pm" value="card" checked />
+                  Card</label
+                >
+                <label
+                  ><input type="radio" name="pm" value="vipps" /> Vipps</label
+                >
+                <label
+                  ><input type="radio" name="pm" value="paypal" /> PayPal</label
+                >
+              </div>
+              <div id="cardFields">
+                <label
+                  >Card number
+                  <input
+                    type="text"
+                    id="card"
+                    placeholder="4242 4242 4242 4242" />
+                </label>
+                <div class="co-row2">
+                  <label
+                    >Expiry
+                    <input type="text" id="exp" placeholder="MM/YY" />
+                  </label>
+                  <label
+                    >CVC
+                    <input type="text" id="cvc" placeholder="123" />
+                  </label>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <aside class="card co-card co-summary" aria-label="Summary">
+            <h2 class="co-h">Summary</h2>
+            <div class="summary-row">
+              <span>Items</span><strong id="sumItems">0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Subtotal</span><strong id="sumSubtotal">$0.00</strong>
+            </div>
+            <div class="summary-row muted">
+              <span>Shipping</span><span>Calculated at payment</span>
+            </div>
+            <div class="summary-total">
+              <span>Total</span><strong id="sumTotal">$0.00</strong>
+            </div>
+            <div class="summary-actions">
+              <a class="pill" href="cart.html">Back to cart</a>
+              <button class="btn-primary" type="submit">Place order</button>
+            </div>
+            <p id="coError" class="form-error" style="display: none"></p>
+          </aside>
+        </form>
+      </main>
+
+      <footer>
+        <div class="container footer-top">
+          <div class="footer-brand">
+            <div class="footer-logo">ProTech</div>
+            <p class="footer-tagline">Beautifully simple electronics.</p>
+          </div>
+          <blockquote class="footer-quote">
+            “Simplicity is the ultimate sophistication.”
+          </blockquote>
+        </div>
+        <div class="container footer-bottom">
+          <small>© <span id="year"></span> ProTech. All rights reserved.</small>
+          <nav class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </footer>
+    </div>
+
+    <script defer src="checkout.js"></script>
+  </body>
+</html>
